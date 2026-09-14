@@ -1,0 +1,13 @@
+{
+    "name": "webbycrown/design-studio-statamic-theme",
+    "type": "statamic-starter-kit",
+    "description": "Creative agency starter kit with services, projects, news, team, pricing, and contact forms.",
+    "require": {
+        "statamic/cms": "*"
+    },
+    "extra": {
+        "statamic": {
+            "starter-kit": true
+        }
+    }
+}

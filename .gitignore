@@ -1,0 +1,8 @@
+/node_modules
+/vendor
+.env
+.env.*
+!.env.example
+/storage/forms/**/*.yaml
+/public/assets/images/marketplace/*.zip
+SETUP.md

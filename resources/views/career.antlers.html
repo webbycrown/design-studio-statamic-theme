@@ -1,0 +1,188 @@
+<div class="wc-main-body">
+		<div data-scroll class="page">
+			<main>
+				<div class="content">
+
+
+					<!-- start-about-hero-section -->
+					<section class="career-hero-section">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<div class="main-career-hero-contant">
+										<div class="career-hero-title-contant">
+											<h2 class="sub_title career-sub-title">Career<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+											<p>We hire people who can own a project without a crowd: designers, producers, and writers who like real constraints more than endless concepts.</p>
+											<p>The studio is small on purpose. You work with the people who present the work. We write in plain language and we will say no when a brief is only decoration.</p>
+											<div class="career-hero-title-image">
+												<img src="/assets/images/career-hero01.jpg">												
+											</div>
+										</div>
+										<div class="career-hero-contant">
+											<div class="career-hero-contant-image">
+												<img src="/assets/images/career-hero02.jpg">												
+											</div>
+											<h5>A role here means you present your own work, write your own notes, and leave files someone else can open in six months. </h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</section>
+					<!-- close-about-hero-section -->
+
+					<!-- start-hiring-section -->
+					<section class="hiring-section border_full_width_top">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<h2 class="sub_title">we’re hiring<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+									<div class="main-hiring-section">
+										<div class="sub-hiring-section">
+											<table class="hiring-table">
+												<thead>
+													<tr>
+														<th>JOB CATEGORIES</th>
+														<th>COMPANY</th>
+														<th>WORK TYPE</th>
+														<th>LOCATION</th>
+														<th>APPLY NOW</th>
+													</tr>
+												</thead>
+												<tbody>
+													{{ collection:careers }}
+													<tr class="js-career-card{{ if count > 6 }} is-hidden{{ /if }}">
+														<td data-label="JOB CATEGORIES">{{ title }}</td>
+														<td data-label="COMPANY">{{ company ?? 'Design Studio' }}</td>
+														<td data-label="WORK TYPE">{{ work_type ?? 'Full Time' }}</td>
+														<td data-label="LOCATION">{{ location ?? 'Mumbai' }}</td>
+														<td data-label="APPLY NOW"><a href="#test-form" class="popup-with-form" data-role="{{ title }}">Apply Now<span><img src="/assets/images/table-arrow.png" alt=""></span></a></td>
+													</tr>
+													{{ /collection:careers }}
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- end-hiring-section -->
+
+					<!-- start-hiring-section -->
+					<section class="hiring-section border_full_width_top">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<h2 class="sub_title">Step work<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+									<div class="main-step-work-section">
+										<div class="step-work-wrap">
+											<div class="step-work-content">
+												<div class="step-work-image">
+													<img src="/assets/images/step-work1.png">
+												</div>
+												<h5>Marketing</h5>
+											</div>
+											<div class="step-work-arrow">
+												<img src="/assets/images/step-work-arrow.png">
+											</div>
+											<div class="step-work-content">
+												<div class="step-work-image">
+													<img src="/assets/images/step-work2.png">
+												</div>
+												<h5>Interview</h5>
+											</div>
+											<div class="step-work-arrow">
+												<img src="/assets/images/step-work-arrow.png">
+											</div>
+											<div class="step-work-content">
+												<div class="step-work-image">
+													<img src="/assets/images/step-work3.png">
+												</div>
+												<h5>Hiring Now</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- end-hiring-section -->
+
+
+
+										<!-- start-testimonial-section -->
+					<section class="testimonial-section about-page-testimonial border_full_width_top">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">CLIENT tRUST<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+									<div class="main-testimonial-slider">
+										<div class="sub-testimonial-slider">
+											<div class="swiper mySwiper2" data-aos="zoom-in" data-aos-duration="1000">
+												<div class="swiper-wrapper">
+													{ collection:testimonials }
+													<div class="swiper-slide">
+														<div class="testimonial-content">
+															<p>“{{ quote ?? excerpt }}”</p>
+														</div>
+													</div>
+													{ /collection:testimonials }
+												</div>
+											</div>
+											<div class="testimonial-user-detail">
+												<div class="swiper mySwiper">
+													<div class="swiper-wrapper">
+														{ collection:testimonials }
+														<div class="swiper-slide">
+															<div class="testimonial-user-detail-box">
+																<div class="testimonial-user-img img-cover">
+																	<img src="{{ image:url ?? '/assets/images/user.png' }}" alt="{{ title }}">
+																</div>
+																<div class="testimonial-user-name">
+																	<h5><a href="javascript:;">{{ title }}</a></h5>
+																	<h4>{{ role ?? 'Client' }}</h4>
+																</div>
+															</div>
+														</div>
+														{ /collection:testimonials }
+													</div>
+												</div>
+												<div class="testimonial-arrow">
+													<div class="swiper-button-prev" data-aos="zoom-in" data-aos-duration="1000"><i class="fa-solid fa-arrow-left-long"></i></div>
+													<div class="swiper-button-next" data-aos="zoom-in" data-aos-duration="1000"><i class="fa-solid fa-arrow-right-long"></i></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- close-testimonial-section -->
+
+
+					<!-- start-wp-newsletter-section -->
+					<div class="wp-newsletter-section border_full_width_top">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">Get in touch<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+									<div class="wp-newsletter-content">
+										{{ partial:partials/contact-form }}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- close-wp-newsletter-section -->
+
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<div class="cursor">
+		<div class="cursor__inner cursor__inner--circle"></div>
+		<div class="cursor__inner cursor__inner--dot"></div>
+	</div>

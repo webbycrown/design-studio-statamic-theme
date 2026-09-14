@@ -1,0 +1,39 @@
+<div class="wc-main-body">
+	<div data-scroll class="page">
+		<main>
+			<div class="content">
+				<section class="wp-blog-three-section item">
+					<div class="container">
+						<div class="col-12 border_full_width_top">
+							<h2 class="sub_title">Latest blog<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+							<div class="wp-blog-three-wrapper">
+								{{ collection:blogs sort="date:desc" limit="3" }}
+								<div class="blog-three-post">
+									<div class="blog-three-post-image img-cover">
+										<img src="{{ image:url ?? '/assets/images/blog-three01.png' }}" alt="{{ title }}">
+									</div>
+									<div class="blog-three-post-content">
+										<h6>{{ date format="d, F Y" }}</h6>
+										<h5>{{ title }}</h5>
+										<div class="blog-three-post-btn">
+											<a class="btn-primary btn" href="{{ url }}">Read More<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+										</div>
+									</div>
+								</div>
+								{{ /collection:blogs }}
+								<div class="latest_btn">
+									<a class="btn-primary btn" href="/latest-blog">LOAD MORE<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+</div>
+
+<div class="cursor">
+	<div class="cursor__inner cursor__inner--circle"></div>
+	<div class="cursor__inner cursor__inner--dot"></div>
+</div>

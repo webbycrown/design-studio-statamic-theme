@@ -1,0 +1,8 @@
+title: Contact
+honeypot: honeypot
+email:
+  -
+    to: admin@example.com
+    reply_to: '{{ email }}'
+    subject: 'New Design Studio message from {{ name }}'
+    html: emails/contact

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial:partials/head-link }}
+<body class="loading">
+    {{ partial:partials/loader }}
+    {{ partial:partials/header }}
+    {{ partial:partials/career-form }}
+    {{ template_content }}
+    {{ unless hide_footer }}
+    {{ partial:partials/footer }}
+    {{ /unless }}
+    {{ partial:partials/footer-link }}
+</body>
+</html>

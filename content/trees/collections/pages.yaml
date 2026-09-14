@@ -1,0 +1,33 @@
+tree:
+  -
+    entry: home
+  -
+    entry: home-two
+  -
+    entry: about
+  -
+    entry: services
+  -
+    entry: project
+  -
+    entry: news
+  -
+    entry: latest-blog
+  -
+    entry: blog-two
+  -
+    entry: blog-three
+  -
+    entry: team
+  -
+    entry: testimonials
+  -
+    entry: pricing
+  -
+    entry: career
+  -
+    entry: faq
+  -
+    entry: contact
+  -
+    entry: presentation

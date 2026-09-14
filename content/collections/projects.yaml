@@ -1,0 +1,12 @@
+title: Projects
+template: projects/show
+layout: layout
+revisions: false
+route: '/project/{slug}'
+date: true
+sort_dir: desc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

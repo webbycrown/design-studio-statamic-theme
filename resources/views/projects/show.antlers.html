@@ -1,0 +1,54 @@
+<div class="wc-main-body">
+		<div data-scroll class="page">
+			<main>
+				<div class="content">
+
+					<section class="wp-project-section wp-project-detail-page-section item">
+						<div class="container">
+							<div class="row">
+								<div class="col-12 border_full_width_top">
+									<div class="wp-project-detail-wrap">
+										<div class="wp-project-detail-title">
+											<h3 data-aos="fade-up" data-aos-duration="1000">{{ title }}</h3>
+										</div>
+										<div class="wp-project-detail-content">
+											<p data-aos="fade-up" data-aos-duration="1000">{{ excerpt }}</p>
+											{{ content }}
+											<div class="wp-project-detail-images img-cover" data-aos="zoom-in" data-aos-duration="1000">
+												<img class="item__img" src="{{ image:url ?? '/assets/images/images-11.jpg' }}" alt="{{ title }}">
+											</div>
+											<div class="wp-project-detail-quotes" data-aos="zoom-in" data-aos-duration="1000">
+												<p>{{ quote ?? excerpt }}</p>
+												<div class="wp-project-detail-quotes-box">
+													<div class="wp-project-detail-quotes-img">
+														<img src="/assets/images/quotes.png" alt="">
+													</div>
+													<div class="wp-project-detail-quotes-title">
+														<strong>{{ client ?? 'Studio partner' }}</strong>
+														<label>{{ role ?? 'Client' }}</label>
+													</div>
+												</div>
+											</div>
+											<div class="wp-social-icon">
+												<ul>
+													<li data-aos="zoom-in" data-aos-duration="1000"><a href="https://twitter.com" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+													<li data-aos="zoom-in" data-aos-duration="1000"><a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+													<li data-aos="zoom-in" data-aos-duration="1000"><a href="https://facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<div class="cursor">
+		<div class="cursor__inner cursor__inner--circle"></div>
+		<div class="cursor__inner cursor__inner--dot"></div>
+	</div>

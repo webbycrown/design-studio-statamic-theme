@@ -1,0 +1,12 @@
+title: Testimonials
+template: default
+layout: layout
+revisions: false
+route: '/testimonials/{slug}'
+date: true
+sort_dir: desc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

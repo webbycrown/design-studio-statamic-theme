@@ -1,0 +1,4 @@
+default:
+  name: 'Design Studio'
+  url: /
+  locale: en_US

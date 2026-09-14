@@ -1,0 +1,12 @@
+title: Design Studio Theme
+user: webbycrown
+repo: webbycrown/design-studio-statamic-theme
+export_paths:
+  - routes
+  - content
+  - resources/blueprints
+  - resources/forms
+  - resources/users
+  - resources/views
+  - public/assets
+  - README.md

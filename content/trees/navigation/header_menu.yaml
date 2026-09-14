@@ -1,0 +1,16 @@
+tree:
+  -
+    entry: home
+    children:
+      -
+        entry: home-two
+  -
+    entry: about
+  -
+    entry: services
+  -
+    entry: project
+  -
+    entry: news
+  -
+    entry: contact

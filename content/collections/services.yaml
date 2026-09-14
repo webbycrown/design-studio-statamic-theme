@@ -1,0 +1,12 @@
+title: Services
+template: services/show
+layout: layout
+revisions: false
+route: '/services/{slug}'
+date: true
+sort_dir: desc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

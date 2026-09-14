@@ -1,0 +1,46 @@
+<head>
+    <title>{{ title ?? site:name }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <link rel="icon" href="/assets/images/five-icon.png" type="image/gif">
+    <style>
+        .is-hidden { display: none !important; }
+        .js-load-more.is-loading,
+        .js-theme-form.is-loading [type="submit"] { opacity: .7; pointer-events: none; }
+        .stay-connect-alert { display: none; margin: 12px 0; color: #c0392b; }
+        .stay-connect-alert.is-visible { display: block; }
+        .stay-connect-success { display: none; margin: 16px 0 24px; }
+        .stay-connect-success.is-visible,
+        .stay-connect-success:not([hidden]) { display: block; }
+        .stay-connect-fields.is-hidden { display: none !important; }
+        .js-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+        button.btn-primary { border: 0; cursor: pointer; background: transparent; }
+        .wc-main-body main,
+        .wc-main-body .page { pointer-events: auto; }
+        .wp-service-work-detail { position: relative; z-index: 5; pointer-events: auto; }
+        .wp-service-work-detail .btn-primary { position: relative; z-index: 6; pointer-events: auto; cursor: pointer; }
+    </style>
+    <link rel="stylesheet" href="/assets/css/aos.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.mixitup.min.js"></script>
+    <script src="/assets/js/waypoints.min.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/modernizr.custom.79639.js"></script>
+    <script src="/assets/js/jquery.ba-cond.min.js"></script>
+    <script src="/assets/js/jquery.slitslider.js"></script>
+    <script src="/assets/js/aos.js"></script>
+    <script src="/assets/js/all.min.js"></script>
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/image-zoom.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/gsap.min.js"></script>
+</head>

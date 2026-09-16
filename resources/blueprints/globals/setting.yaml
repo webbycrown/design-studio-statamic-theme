@@ -1,0 +1,89 @@
+title: Setting
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Branding
+        fields:
+          -
+            handle: site_name
+            field:
+              type: text
+              display: Site Name
+          -
+            handle: logo
+            field:
+              type: assets
+              display: Logo
+              container: assets
+              max_files: 1
+          -
+            handle: footer_logo
+            field:
+              type: assets
+              display: Footer Logo
+              container: assets
+              max_files: 1
+          -
+            handle: favicon
+            field:
+              type: assets
+              display: Favicon
+              container: assets
+              max_files: 1
+      -
+        display: Contact
+        fields:
+          -
+            handle: phone
+            field:
+              type: text
+              display: Phone
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+          -
+            handle: address
+            field:
+              type: textarea
+              display: Address
+          -
+            handle: map_embed
+            field:
+              type: text
+              display: Map embed URL
+              instructions: Google Maps embed URL (without API key). Use format https://maps.google.com/maps?q=...&output=embed
+      -
+        display: Social
+        fields:
+          -
+            handle: twitter
+            field:
+              type: text
+              display: Twitter URL
+          -
+            handle: instagram
+            field:
+              type: text
+              display: Instagram URL
+          -
+            handle: facebook
+            field:
+              type: text
+              display: Facebook URL
+          -
+            handle: linkedin
+            field:
+              type: text
+              display: LinkedIn URL
+      -
+        display: Footer
+        fields:
+          -
+            handle: copyright
+            field:
+              type: text
+              display: Copyright text

@@ -1,0 +1,32 @@
+<!-- blogs_list section (text row layout with load more) -->
+<section class="wp-latest-blog-section item">
+    <div class="container">
+        <div class="col-12 border_full_width_top">
+            <h2 class="sub_title">{{ heading ?? 'Latest blog' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+            <div class="wp-social-post-wrapper">
+                <div>
+                    {{ collection:blogs sort="date:desc" as="posts" }}
+                    {{ posts }}
+                    <div class="wp-social-post js-blog-card{{ if count > 6 }} is-hidden{{ /if }}">
+                        <div class="wp-social-post-btn">
+                            <p>{{ date format="d, F Y" }}</p>
+                            <a class="btn-primary btn" href="{{ url }}">Read More<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                        </div>
+                        <div class="wp-social-post-content">
+                            <p>{{ excerpt ?? title }}</p>
+                        </div>
+                    </div>
+                    {{ /posts }}
+                    {{ /collection:blogs }}
+                </div>
+                {{ collection:blogs as="posts" }}
+                {{ if total_results > 6 }}
+                <div class="latest_btn">
+                    <a class="btn-primary btn js-load-more" href="javascript:;" data-cards=".js-blog-card" data-batch="3">LOAD MORE<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                </div>
+                {{ /if }}
+                {{ /collection:blogs }}
+            </div>
+        </div>
+    </div>
+</section>

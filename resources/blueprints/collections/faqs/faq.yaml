@@ -1,0 +1,27 @@
+title: FAQ
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Question
+              validate:
+                - required
+          -
+            handle: answer
+            field:
+              type: textarea
+              display: Answer
+              validate:
+                - required
+          -
+            handle: order
+            field:
+              type: integer
+              display: Order
+              default: 0

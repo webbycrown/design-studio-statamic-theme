@@ -1,0 +1,16 @@
+<!-- contact_map section -->
+{{ if map_embed || setting:map_embed }}
+<div class="wp-contact-map" data-aos="fade-up" data-aos-duration="1000">
+    <div class="map_canvas">
+        <iframe
+            src="{{ map_embed ?? setting:map_embed }}"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+{{ /if }}

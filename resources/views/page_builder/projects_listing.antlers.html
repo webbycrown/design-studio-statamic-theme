@@ -1,0 +1,31 @@
+<!-- projects_listing section (full page with load more) -->
+<section class="wp-project-page-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 border_full_width_top">
+                <div class="wp-project-page-wrap">
+                    <h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">{{ heading ?? 'pROJECT' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                    <div class="wp-project-page-wrapper">
+                        {{ collection:projects sort="date:desc" as="items" }}
+                        {{ items }}
+                        <div class="wp-project-page-img content__item js-project-card{{ if count > 6 }} is-hidden{{ /if }}">
+                            <div class="wp-project-page-sub-img">
+                                <a href="{{ url }}">
+                                    <img class="content__item-img" src="{{ image:url ?? '/assets/images/project-1.jpg' }}" alt="{{ title }}">
+                                </a>
+                                <div class="content__item-title"></div>
+                            </div>
+                        </div>
+                        {{ /items }}
+                        {{ /collection:projects }}
+                    </div>
+                    {{ collection:projects as="items" }}
+                    {{ if total_results > 6 }}
+                    <a class="btn-primary btn js-load-more" href="javascript:;" data-cards=".js-project-card" data-batch="3" data-aos="fade-up" data-aos-duration="1000">Load MORE<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                    {{ /if }}
+                    {{ /collection:projects }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+<!-- projects_grid section (home style) -->
+<section class="wp-project-section border_full_width_top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">{{ heading ?? 'pROJECT' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                <div class="wp-project-wrapper">
+                    {{ collection:projects sort="date:desc" :limit="limit ?? 4" }}
+                    <div class="wp-project-img" data-aos="flip-up" data-aos-duration="1000">
+                        <img src="{{ image:url ?? '/assets/images/project-1.png' }}" alt="{{ title }}">
+                    </div>
+                    {{ /collection:projects }}
+                </div>
+                {{ if show_button !== false }}
+                <a class="btn-primary btn" data-aos="fade-up" data-aos-duration="1000" href="/project">vIEW MORE<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</section>

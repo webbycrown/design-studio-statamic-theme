@@ -1,0 +1,39 @@
+<!-- pages_index section (pre-built page previews) -->
+<section class="prebuild-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="sub_title">{{ heading ?? 'Prebuild Pages' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                <div class="wp-prebuild-wrapper">
+                    <div class="wp-prebuild-page-wrapper">
+                        {{ if items }}
+                        {{ items }}
+                        <a href="{{ url ?? 'javascript:;' }}" class="wp-prebuild-box">
+                            {{ if image }}
+                            <div class="wp-prebuild-image">
+                                <img src="{{ image:url }}" alt="{{ label }}">
+                            </div>
+                            {{ /if }}
+                            <div class="wp-prebuild-content">
+                                <h6>{{ label }}</h6>
+                            </div>
+                        </a>
+                        {{ /items }}
+                        {{ else }}
+                        {{ collection:pages }}
+                        <a href="{{ url }}" class="wp-prebuild-box">
+                            <div class="wp-prebuild-content">
+                                <h6>{{ title }}</h6>
+                            </div>
+                        </a>
+                        {{ /collection:pages }}
+                        {{ /if }}
+                    </div>
+                    <div class="wp-team-btn wp-prebuild-btn">
+                        <a class="btn-primary btn" data-aos="fade-up" data-aos-duration="1000" href="/team">LOAD MORE<span><img src="/assets/images/prebuild-arrow.png" alt=""></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

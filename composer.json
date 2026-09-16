@@ -3,7 +3,7 @@
     "type": "statamic-starter-kit",
     "description": "Creative agency starter kit with services, projects, news, team, pricing, and contact forms.",
     "require": {
-        "statamic/cms": "*"
+        "statamic/cms": "^5.0"
     },
     "extra": {
         "statamic": {

@@ -1,0 +1,665 @@
+title: Page builder
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      display: Theme sections
+      instructions: One page template. Add any section to this page and drag to reorder.
+      button_label: Add section
+      collapse: accordion
+      sets:
+        content:
+          display: Content
+          sets:
+            home_hero:
+              display: Home Hero
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Main heading
+                -
+                  handle: accent_word
+                  field:
+                    type: text
+                    display: Accent word (under heading)
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Body text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+            home_hero_two:
+              display: Home Hero Two
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Main heading
+                -
+                  handle: heading_two
+                  field:
+                    type: text
+                    display: Second line
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Body text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: hover_image_one
+                  field:
+                    type: assets
+                    display: Hover image 1
+                    container: assets
+                    max_files: 1
+                -
+                  handle: hover_image_two
+                  field:
+                    type: assets
+                    display: Hover image 2
+                    container: assets
+                    max_files: 1
+            about_teaser:
+              display: About Teaser (hover images)
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Teaser text
+                -
+                  handle: hover_image_one
+                  field:
+                    type: assets
+                    display: Hover image 1
+                    container: assets
+                    max_files: 1
+                -
+                  handle: hover_image_two
+                  field:
+                    type: assets
+                    display: Hover image 2
+                    container: assets
+                    max_files: 1
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: About
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                    default: /about
+            about_circle:
+              display: About Circle (rotating text)
+              fields:
+                -
+                  handle: circle_text
+                  field:
+                    type: text
+                    display: Circle rotating text
+                    default: 'my design studio my design studio my design studio'
+                -
+                  handle: text_one
+                  field:
+                    type: textarea
+                    display: Paragraph 1
+                -
+                  handle: text_two
+                  field:
+                    type: textarea
+                    display: Paragraph 2
+                -
+                  handle: text_three
+                  field:
+                    type: textarea
+                    display: Paragraph 3
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: About
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                    default: /about
+            about_hero:
+              display: About Hero
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: About our Studio
+                -
+                  handle: text_one
+                  field:
+                    type: textarea
+                    display: Paragraph 1
+                -
+                  handle: text_two
+                  field:
+                    type: textarea
+                    display: Paragraph 2
+                -
+                  handle: text_three
+                  field:
+                    type: textarea
+                    display: Paragraph 3
+            our_story:
+              display: Our Story
+              fields:
+                -
+                  handle: circle_text
+                  field:
+                    type: text
+                    display: Circle rotating text
+                    default: 'team of designer team of designer'
+                -
+                  handle: text_one
+                  field:
+                    type: textarea
+                    display: Paragraph 1
+                -
+                  handle: text_two
+                  field:
+                    type: textarea
+                    display: Paragraph 2
+                -
+                  handle: images
+                  field:
+                    type: assets
+                    display: Story images (up to 5)
+                    container: assets
+                    max_files: 5
+                -
+                  handle: caption
+                  field:
+                    type: text
+                    display: Caption text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: Get in touch
+            cta_ready:
+              display: CTA — Are You Ready
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: Are You Ready to work with us?
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: Get in touch
+                -
+                  handle: button_url
+                  field:
+                    type: text
+                    display: Button URL
+                    default: /contact
+            working_process:
+              display: Working Process (video/image)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: watch our working process
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Process image
+                    container: assets
+                    max_files: 1
+            career_intro:
+              display: Career Intro
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: Career
+                -
+                  handle: text_one
+                  field:
+                    type: textarea
+                    display: Intro paragraph 1
+                -
+                  handle: text_two
+                  field:
+                    type: textarea
+                    display: Intro paragraph 2
+                -
+                  handle: image_one
+                  field:
+                    type: assets
+                    display: Hero image 1
+                    container: assets
+                    max_files: 1
+                -
+                  handle: image_two
+                  field:
+                    type: assets
+                    display: Hero image 2
+                    container: assets
+                    max_files: 1
+                -
+                  handle: tagline
+                  field:
+                    type: text
+                    display: Right-column tagline
+            step_work:
+              display: Step Work (process steps)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: Step work
+                -
+                  handle: steps
+                  field:
+                    type: replicator
+                    display: Steps
+                    button_label: Add step
+                    sets:
+                      step:
+                        display: Step
+                        fields:
+                          -
+                            handle: label
+                            field:
+                              type: text
+                              display: Step label
+                          -
+                            handle: image
+                            field:
+                              type: assets
+                              display: Step icon/image
+                              container: assets
+                              max_files: 1
+            contact_form:
+              display: Contact Form
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Get in touch
+            contact_info:
+              display: Contact Info
+              fields:
+                -
+                  handle: intro
+                  field:
+                    type: textarea
+                    display: Intro text
+            contact_map:
+              display: Contact Map
+              fields:
+                -
+                  handle: map_embed
+                  field:
+                    type: text
+                    display: Map embed URL
+                    instructions: Paste a Google Maps embed URL. Leave blank to use the global setting.
+            presentation_hero:
+              display: Presentation Hero
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: Design Studio
+                -
+                  handle: subheading
+                  field:
+                    type: text
+                    display: Subheading
+                    default: Figma Design Template
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Body text
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Hero image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                    default: How We Work
+            features_list:
+              display: Features List
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: FEATURES
+                -
+                  handle: items
+                  field:
+                    type: replicator
+                    display: Feature items
+                    button_label: Add feature
+                    sets:
+                      feature:
+                        display: Feature
+                        fields:
+                          -
+                            handle: label
+                            field:
+                              type: text
+                              display: Label
+                          -
+                            handle: url
+                            field:
+                              type: text
+                              display: Link URL
+            inner_pages_slider:
+              display: Inner Pages Slider (Swiper)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Unoqe about
+                -
+                  handle: images
+                  field:
+                    type: assets
+                    display: Slide images
+                    container: assets
+            text_section:
+              display: Text Section
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: images
+                  field:
+                    type: assets
+                    display: Images
+                    container: assets
+        listings:
+          display: Listings
+          sets:
+            services_list:
+              display: Services List (home style)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Services
+                -
+                  handle: intro
+                  field:
+                    type: textarea
+                    display: Intro text
+            services_listing:
+              display: Services Listing (full page)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Services
+            projects_grid:
+              display: Projects Grid (home style, 4 items)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: pROJECT
+                -
+                  handle: limit
+                  field:
+                    type: integer
+                    display: Number of projects
+                    default: 4
+                -
+                  handle: show_button
+                  field:
+                    type: toggle
+                    display: Show "View more" button
+                    default: true
+            projects_listing:
+              display: Projects Listing (full page)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: pROJECT
+            news_list:
+              display: News List (home style, 3 items)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Latest News
+                -
+                  handle: limit
+                  field:
+                    type: integer
+                    display: Number of items
+                    default: 3
+            news_listing:
+              display: News Listing (full page)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Latest News
+            blogs_list:
+              display: Blog List (text rows, load more)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Latest blog
+            blogs_cards:
+              display: Blog Cards (grid with images)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Latest blog
+            blogs_cards_three:
+              display: Blog Cards Three-col
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Latest blog
+                -
+                  handle: limit
+                  field:
+                    type: integer
+                    display: Number of posts
+                    default: 3
+            team_listing:
+              display: Team Listing (full page, load more)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Our team
+            team_grid:
+              display: Team Grid (home style)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Our Team
+                -
+                  handle: limit
+                  field:
+                    type: integer
+                    display: Number of members
+                    default: 3
+            testimonials_slider:
+              display: Testimonials Slider (dual swiper)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: CLIENT tRUST
+            testimonials_slider_two:
+              display: Testimonials Slider Two (single swiper)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: cLIENT say
+            testimonials_grid:
+              display: Testimonials Grid (card layout)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: cLIENT tRUST
+            pricing_plans:
+              display: Pricing Plans
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Pricing Plan
+                -
+                  handle: intro
+                  field:
+                    type: textarea
+                    display: Intro text
+            faqs:
+              display: FAQs
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: "faq's"
+            careers_table:
+              display: Careers Table
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: "we're hiring"
+            pages_index:
+              display: Pages Index (prebuild pages)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Section heading
+                    default: Prebuild Pages
+                -
+                  handle: items
+                  field:
+                    type: replicator
+                    display: Page previews
+                    button_label: Add page
+                    sets:
+                      page_item:
+                        display: Page
+                        fields:
+                          -
+                            handle: label
+                            field:
+                              type: text
+                              display: Label
+                          -
+                            handle: url
+                            field:
+                              type: text
+                              display: URL
+                          -
+                            handle: image
+                            field:
+                              type: assets
+                              display: Preview image
+                              container: assets
+                              max_files: 1

@@ -1,0 +1,29 @@
+<!-- about_teaser section (wp-about hover images) -->
+<div class="wp-about-section border_full_width_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wp-about-images">
+                    {{ if hover_image_one }}
+                    <img class="hover-img" src="{{ hover_image_one }}" alt="hover-1" data-image="hover-1">
+                    {{ else }}
+                    <img class="hover-img" src="/assets/images/orange-texture.jpg" alt="orange-texture" data-image="orange-texture">
+                    {{ /if }}
+                    {{ if hover_image_two }}
+                    <img class="hover-img" src="{{ hover_image_two }}" alt="hover-2" data-image="hover-2">
+                    {{ else }}
+                    <img class="hover-img" src="/assets/images/anni-roenkae.jpg" alt="anni-roenkae" data-image="anni-roenkae">
+                    {{ /if }}
+                </div>
+                <div class="wp-about-content">
+                    <div class="wp-about-content-images-show">
+                        <p data-aos="fade-up" data-aos-duration="1000">{{ text }}</p>
+                    </div>
+                </div>
+                {{ if button_url }}
+                <a class="btn-primary btn" data-aos="fade-up" data-aos-duration="1000" href="{{ button_url ?? '/about' }}">{{ button_label ?? 'About' }}<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</div>

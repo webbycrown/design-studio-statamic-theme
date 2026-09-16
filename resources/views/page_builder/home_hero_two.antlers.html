@@ -1,0 +1,35 @@
+<!-- home_hero_two section -->
+<section class="home-hero-section home2-hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-home-hero-contant border_full_width_bottom">
+                    {{ if hover_image_one }}
+                    <div class="wp-about-images">
+                        <img class="hover-img" src="{{ hover_image_one }}" alt="hover-1" data-image="hover-1">
+                        {{ if hover_image_two }}<img class="hover-img" src="{{ hover_image_two }}" alt="hover-2" data-image="hover-2">{{ /if }}
+                    </div>
+                    {{ else }}
+                    <div class="wp-about-images">
+                        <img class="hover-img" src="/assets/images/orange-texture.jpg" alt="orange-texture" data-image="orange-texture">
+                        <img class="hover-img" src="/assets/images/anni-roenkae.jpg" alt="anni-roenkae" data-image="anni-roenkae">
+                    </div>
+                    {{ /if }}
+                    <div class="home-hero-contant">
+                        <h1 data-aos="flip-up" data-aos-duration="1000">{{ heading ?? 'A Creative' }}
+                            {{ if hover_image_one }}<span class="images-hover-1" data-label="hover-1"><img src="{{ hover_image_one }}" alt=""></span>{{ else }}<span class="images-hover-1" data-label="orange-texture"><img src="/assets/images/orange-texture.jpg" alt=""></span>{{ /if }}
+                        </h1>
+                        <h3 data-aos="fade-right" data-aos-duration="1000">
+                            {{ if hover_image_two }}<span class="images-hover-2" data-label="hover-2"><img src="{{ hover_image_two }}" alt=""></span>{{ else }}<span class="images-hover-2" data-label="anni-roenkae"><img src="/assets/images/anni-roenkae.jpg" alt=""></span>{{ /if }}
+                            {{ heading_two ?? 'Design Studio' }} <span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span>
+                        </h3>
+                        <p data-aos="fade-up" data-aos-duration="1000">{{ text }}</p>
+                        <div class="hero-btn-wrapper" data-aos="fade-up" data-aos-duration="1000">
+                            <a class="btn-primary btn popup-youtube" href="javascript:;">{{ button_label ?? 'How We Work' }} <span><i class="fa-solid fa-play"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

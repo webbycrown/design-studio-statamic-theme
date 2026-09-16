@@ -1,0 +1,4 @@
+title: Plans
+route: '/plans/{slug}'
+revisions: false
+sort_dir: asc

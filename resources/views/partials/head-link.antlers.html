@@ -1,8 +1,12 @@
 <head>
-    <title>{{ title ?? site:name }}</title>
+    <title>{{ seo_title ?? title ?? site:name }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token }}">
+    <meta name="description" content="{{ seo_description ?? excerpt ?? setting:seo_description }}">
+    {{ if seo_keywords or setting:seo_keywords }}<meta name="keywords" content="{{ seo_keywords ?? setting:seo_keywords }}">{{ /if }}
+    <meta name="robots" content="{{ seo_robots ?? 'index, follow' }}">
+    <link rel="canonical" href="{{ seo_canonical ?? permalink ?? current_url }}">
     <link rel="icon" href="/assets/images/five-icon.png" type="image/gif">
     <style>
         .is-hidden { display: none !important; }

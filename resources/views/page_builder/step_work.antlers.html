@@ -1,0 +1,44 @@
+<!-- step_work section -->
+<section class="hiring-section border_full_width_top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="sub_title">{{ heading ?? 'Step work' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                <div class="main-step-work-section">
+                    <div class="step-work-wrap">
+                        {{ if steps }}
+                        {{ steps }}
+                        <div class="step-work-content">
+                            <div class="step-work-image">
+                                {{ if image }}<img src="{{ image:url }}" alt="{{ label }}">{{ else }}<img src="/assets/images/step-work1.png" alt="{{ label }}">{{ /if }}
+                            </div>
+                            <h5>{{ label }}</h5>
+                        </div>
+                        {{ if !last }}
+                        <div class="step-work-arrow">
+                            <img src="/assets/images/step-work-arrow.png" alt="">
+                        </div>
+                        {{ /if }}
+                        {{ /steps }}
+                        {{ else }}
+                        <div class="step-work-content">
+                            <div class="step-work-image"><img src="/assets/images/step-work1.png" alt=""></div>
+                            <h5>Marketing</h5>
+                        </div>
+                        <div class="step-work-arrow"><img src="/assets/images/step-work-arrow.png" alt=""></div>
+                        <div class="step-work-content">
+                            <div class="step-work-image"><img src="/assets/images/step-work2.png" alt=""></div>
+                            <h5>Interview</h5>
+                        </div>
+                        <div class="step-work-arrow"><img src="/assets/images/step-work-arrow.png" alt=""></div>
+                        <div class="step-work-content">
+                            <div class="step-work-image"><img src="/assets/images/step-work3.png" alt=""></div>
+                            <h5>Hiring Now</h5>
+                        </div>
+                        {{ /if }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

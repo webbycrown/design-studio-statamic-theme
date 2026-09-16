@@ -1,0 +1,39 @@
+<!-- about_circle section (wp-about2 rotating circle) -->
+<div class="wp-about2-section border_full_width_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wp-about2-wrap">
+                    <div class="wp-about2-circle">
+                        <div class="circle">
+                            <div class="logo">
+                                <svg width="52" height="62" viewBox="0 0 52 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M51.5442 36.364L48.3623 33.182L28.3317 53.2125L28.3317 0.423489L23.8451 0.423489L23.8451 53.2125L3.81454 33.182L0.632554 36.364L26.0884 61.8198L51.5442 36.364Z" fill="#5754FC"/>
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <p>{{ circle_text ?? 'my design studio my design studio my design studio' }}</p>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            (function(){
+                                var textEl = document.querySelector(".wp-about2-circle .text p");
+                                if(textEl){
+                                    textEl.innerHTML = textEl.innerText.split("").map(function(char,i){
+                                        return '<span style="transform:rotate('+(i*7.0)+'deg)">'+char+'</span>';
+                                    }).join("");
+                                }
+                            })();
+                        </script>
+                    </div>
+                    <div class="wp-about-content">
+                        {{ if text_one }}<p>{{ text_one }}</p>{{ /if }}
+                        {{ if text_two }}<p>{{ text_two }}</p>{{ /if }}
+                        {{ if text_three }}<p>{{ text_three }}</p>{{ /if }}
+                        <a class="btn-primary btn" data-aos="fade-up" data-aos-duration="1000" href="{{ button_url ?? '/about' }}">{{ button_label ?? 'About' }}<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

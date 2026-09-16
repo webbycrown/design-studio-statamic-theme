@@ -3,7 +3,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="footer-logo-content">
-                    <a href="/"><img src="/assets/images/footer-logo.png" alt="Design Studio"></a>
+                    <a href="/">
+                        {{ partial:partials/media-url :file="setting:footer_logo" fallback="images/footer-logo.png" }}
+                        {{ if logo_url }}<img src="{{ logo_url }}" alt="{{ setting:site_name ?? 'Design Studio' }}">{{ /if }}
+                    </a>
                 </div>
                 <div class="footer-content-wrapper">
                     <div class="contact-wrapper">
@@ -15,15 +18,21 @@
                     </div>
                     <div class="wp-social-icon">
                         <ul>
-                            <li><a href="https://twitter.com" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
-                            <li><a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="https://facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            {{ if setting:twitter }}
+                            <li><a href="{{ setting:twitter }}" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                            {{ /if }}
+                            {{ if setting:instagram }}
+                            <li><a href="{{ setting:instagram }}" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                            {{ /if }}
+                            {{ if setting:facebook }}
+                            <li><a href="{{ setting:facebook }}" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            {{ /if }}
                         </ul>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="copy-right-content border_full_width_top">
-                        <p>@ 2021 DesignStudio. All Right Reserved</p>
+                        <p>{{ setting:copyright ?? '@ 2021 DesignStudio. All Right Reserved' }}</p>
                     </div>
                 </div>
             </div>

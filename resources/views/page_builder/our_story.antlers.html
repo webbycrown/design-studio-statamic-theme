@@ -1,0 +1,53 @@
+<!-- our_story section -->
+<section class="wp-our-story-section">
+    <div class="container">
+        <div class="col-12">
+            <h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">Our story<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+            <div class="wp-our-story-content">
+                <div class="wp-our-story-circle">
+                    <div data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="circle">
+                            <div class="text">
+                                <p>{{ circle_text ?? 'team of designer team of designer' }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        (function(){
+                            var el = document.querySelector('.wp-our-story-section .circle .text p');
+                            if(el){
+                                el.innerHTML = el.innerText.split("").map(function(char,i){
+                                    return '<span style="transform:rotate('+(i*10)+'deg)">'+char+'</span>';
+                                }).join("");
+                            }
+                        })();
+                    </script>
+                </div>
+                <div class="wp-our-story-wrapper">
+                    {{ if text_one }}<p data-aos="fade-up" data-aos-duration="1000">{{ text_one }}</p>{{ /if }}
+                    {{ if text_two }}<p data-aos="fade-up" data-aos-duration="1000">{{ text_two }}</p>{{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ if images }}
+<div class="wp-our-story-images border_full_width_top">
+    <div class="container">
+        <div class="col-12">
+            <div class="wp-our-story-images-wrappr">
+                {{ images }}
+                <div class="wp-our-story-images-box img-cover content__item" data-aos="fade-up" data-aos-duration="1000">
+                    <img class="content__item-img" src="{{ url }}" alt="">
+                    <div class="content__item-title"></div>
+                </div>
+                {{ /images }}
+                <div class="wp-our-story-text">
+                    <p data-aos="fade-up" data-aos-duration="1000">{{ caption }}</p>
+                    <a class="btn-primary btn" href="/contact" data-aos="fade-up" data-aos-duration="1000">{{ button_label ?? 'Get in touch' }}<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ /if }}

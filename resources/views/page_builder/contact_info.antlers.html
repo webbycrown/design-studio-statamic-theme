@@ -1,0 +1,50 @@
+<!-- contact_info section -->
+<div class="wp-contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="wp-contact-form-content">
+                    <div class="wp-sub-contact-form-content">
+                        <h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">Get in touch<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                        {{ if intro }}<p data-aos="fade-up" data-aos-duration="1000">{{ intro }}</p>{{ /if }}
+                        <div class="wp-contact-form">
+                            {{ partial:partials/contact-form }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="wp-contact-map-section">
+                    <div class="wp-contact-map-content">
+                        <ul>
+                            {{ if setting:address }}
+                            <li data-aos="fade-up" data-aos-duration="1000">
+                                <div class="wp-contact-icon">
+                                    <svg width="13" height="19" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 0.75C3.11375 0.75 0.375 3.48875 0.375 6.875C0.375 11.4688 6.5 18.25 6.5 18.25C6.5 18.25 12.625 11.4688 12.625 6.875C12.625 3.48875 9.88625 0.75 6.5 0.75ZM6.5 9.0625C5.91984 9.0625 5.36344 8.83203 4.9532 8.4218C4.54297 8.01156 4.3125 7.45516 4.3125 6.875C4.3125 6.29484 4.54297 5.73844 4.9532 5.3282C5.36344 4.91797 5.91984 4.6875 6.5 4.6875C7.08016 4.6875 7.63656 4.91797 8.0468 5.3282C8.45703 5.73844 8.6875 6.29484 8.6875 6.875C8.6875 7.45516 8.45703 8.01156 8.0468 8.4218C7.63656 8.83203 7.08016 9.0625 6.5 9.0625Z" fill="white"/></svg>
+                                </div>
+                                <div class="wp-contact-link"><h4><a href="">{{ setting:address }}</a></h4></div>
+                            </li>
+                            {{ /if }}
+                            {{ if setting:phone }}
+                            <li data-aos="fade-up" data-aos-duration="1000">
+                                <div class="wp-contact-icon">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.8247 11.3525L12.6022 11.0988C12.3409 11.0681 12.076 11.097 11.8274 11.1834C11.5789 11.2698 11.3532 11.4114 11.1672 11.5975L9.5572 13.2075C7.07324 11.9442 5.05426 9.92525 3.79095 7.44129L5.4097 5.82254C5.78595 5.44629 5.9697 4.92129 5.90845 4.38754L5.6547 2.18254C5.60509 1.75569 5.40024 1.362 5.07915 1.07641C4.75807 0.790817 4.34317 0.63328 3.91345 0.63379H2.3997C1.41095 0.63379 0.588449 1.45629 0.649699 2.44504C1.11345 9.91754 7.0897 15.885 14.5534 16.3488C15.5422 16.41 16.3647 15.5875 16.3647 14.5988V13.085C16.3734 12.2013 15.7084 11.4575 14.8247 11.3525Z" fill="white"/></svg>
+                                </div>
+                                <div class="wp-contact-link"><h4><a href="tel:{{ setting:phone }}">{{ setting:phone }}</a></h4></div>
+                            </li>
+                            {{ /if }}
+                            {{ if setting:email }}
+                            <li data-aos="fade-up" data-aos-duration="1000">
+                                <div class="wp-contact-icon">
+                                    <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 8.375L0.75 2.915V2.25C0.75 1.27875 1.52875 0.5 2.5 0.5H16.5C16.9641 0.5 17.4092 0.684374 17.7374 1.01256C18.0656 1.34075 18.25 1.78587 18.25 2.25V2.90625L9.5 8.375ZM18.25 12.75C18.25 13.2141 18.0656 13.6592 17.7374 13.9874C17.4092 14.3156 16.9641 14.5 16.5 14.5H2.5C2.03587 14.5 1.59075 14.3156 1.26256 13.9874C0.934374 13.6592 0.75 13.2141 0.75 12.75V4.97125L2.5 6.065V12.75H16.5V6.065L18.25 4.97125V12.75Z" fill="white"/></svg>
+                                </div>
+                                <div class="wp-contact-link"><h4><a href="mailto:{{ setting:email }}">{{ setting:email }}</a></h4></div>
+                            </li>
+                            {{ /if }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

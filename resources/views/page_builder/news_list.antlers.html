@@ -1,0 +1,28 @@
+<!-- news_list section (home style, 3 items) -->
+<section class="wp-social-post-section border_full_width_top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">{{ heading ?? 'Latest News' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                <div class="wp-social-post-wrapper">
+                    <div>
+                        {{ collection:news sort="date:desc" :limit="limit ?? 3" }}
+                        <div class="wp-social-post" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="wp-social-post-btn">
+                                <p>{{ date format="d, F Y" }}</p>
+                                <a class="btn-primary btn" href="{{ url }}">Read More<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                            </div>
+                            <div class="wp-social-post-content">
+                                <p>{{ title }}</p>
+                            </div>
+                        </div>
+                        {{ /collection:news }}
+                    </div>
+                    <div class="latest_btn">
+                        <a class="btn-primary btn" href="/news" data-aos="fade-up" data-aos-duration="1000">More News<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

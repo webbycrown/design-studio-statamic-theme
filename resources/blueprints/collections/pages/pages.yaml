@@ -1,44 +1,62 @@
 title: Pages
 tabs:
   main:
-    display: Main
+    display: Page
     sections:
       -
+        display: Content
         fields:
-        -
-          handle: title
-          field:
-            type: text
-            display: Title
-        -
-          handle: image
-          field:
-            type: assets
-            display: Image
-            container: assets
-            max_files: 1
-        -
-          handle: excerpt
-          field:
-            type: textarea
-            display: Excerpt
-        -
-          handle: content
-          field:
-            type: markdown
-            display: Content
-        -
-          handle: template
-          field:
-            type: template
-            display: Template
-        -
-          handle: body_class
-          field:
-            type: text
-            display: Body Class
-        -
-          handle: hide_footer
-          field:
-            type: text
-            display: Hide Footer
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+              validate:
+                - required
+          -
+            handle: excerpt
+            field:
+              type: textarea
+              display: Excerpt
+              instructions: Short intro. Optional.
+      -
+        display: Theme sections
+        instructions: Every page uses the same Page template. Add any section here and drag to reorder.
+        fields:
+          -
+            import: page_builder
+      -
+        display: Page chrome
+        fields:
+          -
+            handle: template
+            field:
+              type: hidden
+              default: page
+          -
+            handle: body_class
+            field:
+              type: text
+              display: Body Class
+              instructions: Optional extra CSS class on body.
+          -
+            handle: hide_footer
+            field:
+              type: toggle
+              display: Hide Footer
+              default: false
+          -
+            handle: image
+            field:
+              type: assets
+              display: Fallback image
+              container: assets
+              max_files: 1
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Search and social
+        fields:
+          -
+            import: seo

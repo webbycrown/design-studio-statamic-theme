@@ -1,0 +1,36 @@
+<!-- careers_table section -->
+<section class="hiring-section border_full_width_top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="sub_title">{{ heading ?? "we're hiring" }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                <div class="main-hiring-section">
+                    <div class="sub-hiring-section">
+                        <table class="hiring-table">
+                            <thead>
+                                <tr>
+                                    <th>JOB CATEGORIES</th>
+                                    <th>COMPANY</th>
+                                    <th>WORK TYPE</th>
+                                    <th>LOCATION</th>
+                                    <th>APPLY NOW</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{ collection:careers }}
+                                <tr class="js-career-card{{ if count > 6 }} is-hidden{{ /if }}">
+                                    <td data-label="JOB CATEGORIES">{{ title }}</td>
+                                    <td data-label="COMPANY">{{ company ?? setting:site_name ?? 'Design Studio' }}</td>
+                                    <td data-label="WORK TYPE">{{ work_type ?? 'Full Time' }}</td>
+                                    <td data-label="LOCATION">{{ location ?? 'Remote' }}</td>
+                                    <td data-label="APPLY NOW"><a href="#test-form" class="popup-with-form" data-role="{{ title }}">Apply Now<span><img src="/assets/images/table-arrow.png" alt=""></span></a></td>
+                                </tr>
+                                {{ /collection:careers }}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

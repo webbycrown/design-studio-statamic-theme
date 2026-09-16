@@ -1,0 +1,19 @@
+<!-- about_hero section -->
+<section class="about-hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-about-hero-contant">
+                    <div class="about-hero-title-contant">
+                        <h2 class="sub_title" data-aos="fade-right" data-aos-duration="1000">{{ heading ?? 'About our Studio' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                    </div>
+                    <div class="about-hero-contant">
+                        {{ if text_one }}<p data-aos="fade-up" data-aos-duration="1000">{{ text_one }}</p>{{ /if }}
+                        {{ if text_two }}<p data-aos="fade-up" data-aos-duration="1000">{{ text_two }}</p>{{ /if }}
+                        {{ if text_three }}<p data-aos="fade-up" data-aos-duration="1000">{{ text_three }}</p>{{ /if }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

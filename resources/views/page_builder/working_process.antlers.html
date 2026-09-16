@@ -1,0 +1,17 @@
+<!-- working_process section -->
+<section class="wp-service-working-process-section border_full_width_top item">
+    <div class="container">
+        <div class="col-12">
+            <h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">{{ heading ?? 'watch our working process' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+            <div class="wp-service-working-process" data-aos="flip-up" data-aos-duration="1000">
+                <div class="wp-service-working-process-img img-cover">
+                    {{ if image }}
+                    <img class="item__img" src="{{ image:url }}" alt="{{ heading }}">
+                    {{ else }}
+                    <img class="item__img" src="/assets/images/images-16.jpg" alt="">
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

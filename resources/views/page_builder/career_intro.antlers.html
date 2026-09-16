@@ -1,0 +1,29 @@
+<!-- career_intro section -->
+<section class="career-hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-career-hero-contant">
+                    <div class="career-hero-title-contant">
+                        <h2 class="sub_title career-sub-title">{{ heading ?? 'Career' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                        {{ if text_one }}<p>{{ text_one }}</p>{{ /if }}
+                        {{ if text_two }}<p>{{ text_two }}</p>{{ /if }}
+                        {{ if image_one }}
+                        <div class="career-hero-title-image">
+                            <img src="{{ image_one:url }}" alt="">
+                        </div>
+                        {{ /if }}
+                    </div>
+                    <div class="career-hero-contant">
+                        {{ if image_two }}
+                        <div class="career-hero-contant-image">
+                            <img src="{{ image_two:url }}" alt="">
+                        </div>
+                        {{ /if }}
+                        {{ if tagline }}<h5>{{ tagline }}</h5>{{ /if }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

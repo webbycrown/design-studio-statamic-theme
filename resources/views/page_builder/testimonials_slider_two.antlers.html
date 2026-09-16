@@ -1,0 +1,43 @@
+<!-- testimonials_slider_two section (single swiper, home-two style) -->
+<section class="testimonial2-section border_full_width_top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">{{ heading ?? 'cLIENT say' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                <div class="main-testimonial2-slider">
+                    <div class="swiper mySwiper" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="swiper-wrapper">
+                            {{ collection:testimonials }}
+                            <div class="swiper-slide">
+                                <div class="testimonial2-user-detail">
+                                    <div class="testimonial2-content">
+                                        <p>{{ quote ?? excerpt }}</p>
+                                    </div>
+                                    <div class="testimonial2-user-detail-box">
+                                        <div class="testimonial2-user-detail-sub-box">
+                                            <div class="testimonial2-user-img img-cover">
+                                                <img src="{{ image:url ?? '/assets/images/user.png' }}" alt="{{ title }}">
+                                            </div>
+                                            <div class="testimonial2-user-name">
+                                                <h5><a href="javascript:;">{{ title }}</a></h5>
+                                                <h4>{{ role ?? 'Client' }}</h4>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial2-quote">
+                                            <i class="fa-solid fa-quote-left"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ /collection:testimonials }}
+                        </div>
+                    </div>
+                    <div class="testimonial2-arrow">
+                        <div class="swiper-button-prev" data-aos="zoom-in" data-aos-duration="1000"><i class="fa-solid fa-arrow-left-long"></i></div>
+                        <div class="swiper-button-next" data-aos="zoom-in" data-aos-duration="1000"><i class="fa-solid fa-arrow-right-long"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

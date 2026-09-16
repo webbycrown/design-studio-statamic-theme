@@ -1,0 +1,14 @@
+title: Setting
+data:
+  site_name: Design Studio
+  logo: images/logo.png
+  footer_logo: images/footer-logo.png
+  phone: '+91 987654321'
+  email: info@designstudio.com
+  address: '24 US Highway 3, Whiting, VT 5338, United States'
+  map_embed: 'https://maps.google.com/maps?q=24+US+Highway+3+Whiting+VT&hl=en&z=14&ie=UTF8&output=embed'
+  twitter: 'https://twitter.com'
+  instagram: 'https://instagram.com'
+  facebook: 'https://facebook.com'
+  linkedin: 'https://linkedin.com'
+  copyright: '@ 2021 DesignStudio. All Right Reserved'

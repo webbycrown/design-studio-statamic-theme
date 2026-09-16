@@ -4,11 +4,25 @@
             <div class="col-12">
                 <div class="header-contant">
                     <div class="logo-content">
-                        <a href="/"><img src="/assets/images/logo.png" alt="Design Studio"></a>
+                        <a href="/">
+                            {{ partial:partials/media-url :file="setting:logo" fallback="images/logo.png" }}
+                            {{ if logo_url }}<img src="{{ logo_url }}" alt="{{ setting:site_name ?? 'Design Studio' }}">{{ /if }}
+                        </a>
                     </div>
                     <ul class="manu-bar">
                         {{ nav:header_menu }}
-                        <li><a href="{{ url }}"{{ if is_current || is_parent }} class="active"{{ /if }}>{{ title }}</a></li>
+                        <li>
+                            {{ if children }}
+                            <a href="{{ url }}"{{ if is_current || is_parent }} class="active"{{ /if }}>{{ title }}</a>
+                            <ul>
+                                {{ children }}
+                                <li><a href="{{ url }}"{{ if is_current }} class="active"{{ /if }}>{{ title }}</a></li>
+                                {{ /children }}
+                            </ul>
+                            {{ else }}
+                            <a href="{{ url }}"{{ if is_current || is_parent }} class="active"{{ /if }}>{{ title }}</a>
+                            {{ /if }}
+                        </li>
                         {{ /nav:header_menu }}
                     </ul>
                     <ul class="search-cart-bar">
@@ -25,18 +39,9 @@
                                 <form class="search-log" action="/news" method="get">
                                     <div class="marquee-wrapper">
                                         <div class="marquee-inner">
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
-                                            <h6 class="t-button">DESIGN STUDIO</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
+                                            {{ loop from="1" to="12" }}
+                                            <h6 class="t-button">{{ setting:site_name ?? 'DESIGN STUDIO' }}</h6><div class="delimiter"><img src="/assets/images/star-shape-2.png" alt=""></div>
+                                            {{ /loop }}
                                         </div>
                                     </div>
                                     <div class="input-group">
@@ -51,17 +56,18 @@
                             <label for="menu-icon"></label>
                             <nav class="nav">
                                 <ul>
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/home-two">Home Two</a></li>
-                                    <li><a href="/about">About</a></li>
-                                    <li><a href="/services">Services</a></li>
-                                    <li><a href="/project">Project</a></li>
-                                    <li><a href="/news">News</a></li>
-                                    <li><a href="/team">Team</a></li>
-                                    <li><a href="/pricing">Pricing</a></li>
-                                    <li><a href="/career">Career</a></li>
-                                    <li><a href="/faq">FAQ</a></li>
-                                    <li><a href="/contact">Contact</a></li>
+                                    {{ nav:header_menu }}
+                                    <li>
+                                        <a href="{{ url }}">{{ title }}</a>
+                                        {{ if children }}
+                                        <ul>
+                                            {{ children }}
+                                            <li><a href="{{ url }}">{{ title }}</a></li>
+                                            {{ /children }}
+                                        </ul>
+                                        {{ /if }}
+                                    </li>
+                                    {{ /nav:header_menu }}
                                 </ul>
                             </nav>
                         </li>

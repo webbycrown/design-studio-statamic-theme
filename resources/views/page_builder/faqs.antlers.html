@@ -1,0 +1,28 @@
+<!-- faqs section (queries faqs collection) -->
+<section class="wp-faq-section item">
+    <div class="container">
+        <div class="col-12 border_full_width_top">
+            <h2 class="sub_title">{{ heading ?? "faq's" }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+            <div class="wp-faq-wrapper">
+                {{ collection:faqs sort="order:asc" }}
+                <div class="wp-faq-content">
+                    <div class="wp-faq-item">
+                        <div class="wp-faq-tab">
+                            <div class="wp-faq-text">
+                                <p>{{ title }}</p>
+                            </div>
+                            <div class="wp-faq-toggle">
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </div>
+                        <div class="wp-faq-toggle-content">
+                            <p>{{ answer }}</p>
+                        </div>
+                    </div>
+                </div>
+                {{ /collection:faqs }}
+            </div>
+        </div>
+    </div>
+</section>

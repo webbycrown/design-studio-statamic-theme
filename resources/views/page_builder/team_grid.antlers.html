@@ -1,0 +1,33 @@
+<!-- team_grid section (home-two style, limited) -->
+<section class="wp-team-section border_full_width_top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="sub_title" data-aos="fade-up" data-aos-duration="1000">{{ heading ?? 'Our Team' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                <div class="wp-team-wrapper">
+                    {{ collection:team sort="date:asc" :limit="limit ?? 3" }}
+                    <div class="wp-team-box">
+                        <div class="wp-team-img" data-aos="flip-up" data-aos-duration="1000">
+                            <img src="{{ image:url ?? '/assets/images/team1.jpg' }}" alt="{{ title }}">
+                        </div>
+                        <div class="wp-team-content">
+                            <h4><a href="{{ url }}">{{ title }}</a></h4>
+                            <p>{{ role ?? 'Web Designer' }}</p>
+                            <div class="wp-social-icon">
+                                <ul>
+                                    {{ if twitter }}<li><a href="{{ twitter }}" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>{{ /if }}
+                                    {{ if instagram }}<li><a href="{{ instagram }}" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>{{ /if }}
+                                    {{ if facebook }}<li><a href="{{ facebook }}" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>{{ /if }}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {{ /collection:team }}
+                </div>
+                <div class="wp-team-btn">
+                    <a class="btn-primary btn" data-aos="fade-up" data-aos-duration="1000" href="/team">vIEW MORE<span><img src="/assets/images/btn-arrow.png" alt=""></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

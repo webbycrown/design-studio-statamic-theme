@@ -1,0 +1,31 @@
+<!-- features_list section -->
+<section class="wp-features-section border_full_width_bottom">
+    <div class="container">
+        <div class="col-12">
+            <h2 class="sub_title">{{ heading ?? 'FEATURES' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+            <div class="wp-service-wrapper">
+                <ul class="wp-service-box">
+                    {{ if items }}
+                    {{ items }}
+                    <li>
+                        <a href="{{ url ?? 'javascript:;' }}">
+                            <span>{{ label }}</span>
+                            <span><img src="/assets/images/service-arrow.png" alt=""></span>
+                        </a>
+                    </li>
+                    {{ /items }}
+                    {{ else }}
+                    <li><a href="javascript:;"><span>Grid Layout</span><span><img src="/assets/images/service-arrow.png" alt=""></span></a></li>
+                    <li><a href="javascript:;"><span>Google fonts</span><span><img src="/assets/images/service-arrow.png" alt=""></span></a></li>
+                    <li><a href="javascript:;"><span>Fully responsive</span><span><img src="/assets/images/service-arrow.png" alt=""></span></a></li>
+                    <li><a href="javascript:;"><span>Privacy policy</span><span><img src="/assets/images/service-arrow.png" alt=""></span></a></li>
+                    <li><a href="javascript:;"><span>Pixel images</span><span><img src="/assets/images/service-arrow.png" alt=""></span></a></li>
+                    <li><a href="javascript:;"><span>Modal popups</span><span><img src="/assets/images/service-arrow.png" alt=""></span></a></li>
+                    <li><a href="javascript:;"><span>Modern design</span><span><img src="/assets/images/service-arrow.png" alt=""></span></a></li>
+                    <li><a href="javascript:;"><span>Contact form</span><span><img src="/assets/images/service-arrow.png" alt=""></span></a></li>
+                    {{ /if }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+title: Footer
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: about_text
+            field:
+              type: textarea
+              display: About text
+              instructions: Short description shown in footer (Home Two style).
+          -
+            handle: quick_links_title
+            field:
+              type: text
+              display: Quick links title
+              default: quick links
+          -
+            handle: more_links_title
+            field:
+              type: text
+              display: More links title
+              default: provide more

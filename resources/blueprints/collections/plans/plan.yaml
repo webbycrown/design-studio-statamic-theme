@@ -1,0 +1,59 @@
+title: Plan
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Plan name
+              validate:
+                - required
+          -
+            handle: price
+            field:
+              type: text
+              display: Price (e.g. $29)
+          -
+            handle: period
+            field:
+              type: text
+              display: Period (e.g. /month)
+              default: /month
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Short description
+          -
+            handle: features
+            field:
+              type: list
+              display: Features
+          -
+            handle: button_label
+            field:
+              type: text
+              display: Button label
+              default: Select Plan
+          -
+            handle: button_url
+            field:
+              type: text
+              display: Button URL
+              default: /contact
+          -
+            handle: featured
+            field:
+              type: toggle
+              display: Featured (highlighted)
+              default: false
+          -
+            handle: order
+            field:
+              type: integer
+              display: Sort order
+              default: 0

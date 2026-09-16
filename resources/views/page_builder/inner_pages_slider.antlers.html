@@ -1,0 +1,35 @@
+<!-- inner_pages_slider section (Swiper) -->
+<section class="unoqe-section border_full_width_top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="sub_title">{{ heading ?? 'Unoqe about' }}<span class="star-shape"><img src="/assets/images/star-shape.png" alt=""></span></h2>
+                <div class="unoqe-wrapper">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            {{ if images }}
+                            {{ images }}
+                            <div class="swiper-slide">
+                                <div class="unoqe-image-wrapper">
+                                    <div class="unoqe-image">
+                                        <img src="{{ url }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            {{ /images }}
+                            {{ else }}
+                            <div class="swiper-slide"><div class="unoqe-image-wrapper"><div class="unoqe-image"><img src="/assets/images/unoqe1.jpg" alt=""></div></div></div>
+                            <div class="swiper-slide"><div class="unoqe-image-wrapper"><div class="unoqe-image"><img src="/assets/images/unoqe2.jpg" alt=""></div></div></div>
+                            <div class="swiper-slide"><div class="unoqe-image-wrapper"><div class="unoqe-image"><img src="/assets/images/unoqe3.jpg" alt=""></div></div></div>
+                            {{ /if }}
+                        </div>
+                    </div>
+                    <div class="testimonial2-arrow unoqe-btn">
+                        <div class="swiper-button-prev" data-aos="zoom-in" data-aos-duration="1000"><i class="fa-solid fa-arrow-left-long"></i></div>
+                        <div class="swiper-button-next" data-aos="zoom-in" data-aos-duration="1000"><i class="fa-solid fa-arrow-right-long"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

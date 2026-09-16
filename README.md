@@ -51,6 +51,17 @@ Every page entry has a **Theme sections** tab in the Control Panel. Click **Add 
 
 Navigate to **Globals → Setting** to configure site name, logo, contact details, social URLs, and the Google Maps embed URL.
 
+## Control Panel Forms
+
+| Form | Handle | Notes |
+|---|---|---|
+| Contact | `contact` | AJAX contact inquiry |
+| Career | `career` | AJAX job application |
+
+Statamic Core includes one form. Use **Statamic Pro** if you keep both.
+
+Set each form’s email recipient in **CP → Forms** after install.
+
 ## Support
 
 [github.com/webbycrown/design-studio-statamic-theme/issues](https://github.com/webbycrown/design-studio-statamic-theme/issues)
